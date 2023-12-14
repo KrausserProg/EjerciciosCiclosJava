@@ -1,0 +1,18 @@
+public class PalabrasPorCentinela {
+
+    public static void main(String[] args) {
+        //mostrar palabras hasta que llegue la palabra salir
+        System.out.println("ingrese una palabra");
+        Scanner leer = new Scanner(System.in);
+        String palabra;
+        palabra = leer.next();
+        //con equals se comparan strings
+        while(!palabra.equals("salir")){
+            System.out.println("la palabra es: "+palabra);
+            palabra = leer.next();
+        }
+        
+
+    }
+
+}
