@@ -1,0 +1,42 @@
+public class InscripcionesCategoriasFutbol {
+
+    public static void main(String[] args) {
+        /*inscripciones a una cantera de futbol 
+        dependiendo la edad se inscriben a la categoria del equipo
+         de 6 a 10 años son liga menores A
+        de 11 a 15 años son liga menores B
+        de 16 a 18 años son liga menores C
+        de 19 años para arriba son liga equipo A.
+        Si se escribe en el dni 0 o el nombre "fin" se detiene el programa*/ 
+        System.out.println("Ingrese el DNI de la persona");
+        Scanner leer = new Scanner(System.in);
+        String dni = leer.nextLine();
+        
+        System.out.println("Ingrese el nombre de la persona");
+        String nombre = leer.nextLine();
+        
+        System.out.println("Ingrese la edad");
+        Scanner leer2 = new Scanner(System.in);
+        int edad = leer2.nextInt();
+        
+        while(!dni.equals("0")&& !nombre.equalsIgnoreCase("fin")){
+            if (edad >= 6 && edad <= 10) {
+                System.out.println("La liga es Menores A");
+            }else if (edad >= 11 && edad <=15 ) {
+                System.out.println("La liga es Menores B");
+            }else if (edad >= 16 && edad <= 18) {
+                System.out.println("La liga es Menores C");
+            }else if (edad >= 19) {
+                System.out.println("La liga es Equipo A");
+            }else{
+                System.out.println("La persona "+nombre+" no tiene edad suficiente");
+            }
+            //volver a leer
+            System.out.println("Ingrese el DNI de la persona");
+            dni = leer.nextLine();
+            System.out.println("Ingrese el nombre de la persona");
+            nombre = leer.nextLine();
+            System.out.println("Ingrese la edad");
+            edad = leer2.nextInt();
+        }
+    }
