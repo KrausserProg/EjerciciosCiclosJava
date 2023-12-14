@@ -1,0 +1,15 @@
+public class MostrarNumerosLimite {
+
+    public static void main(String[] args) {
+        //realizar un programa que dado por teclado un limite numerico
+        //por teclado (por ejemplo = 100) muestre en pantalla todos
+        //los numeros hasta ese número
+        Scanner leer = new Scanner(System.in);
+        int numero;
+        System.out.println("ingrese el numero limite");
+        numero = leer.nextInt();
+        for (int i = 1; i <= numero; i++) {
+            System.out.println("número "+i);
+        }
+    }    
+}
